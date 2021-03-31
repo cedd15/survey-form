@@ -33,13 +33,14 @@
             <input type="email" id="email" placeholder="Enter your email address"><br>
 
             <!-- Enter your age  -->
-            <label for="age">Age</label>
+            <label for="age">Age <span>(optional)</span></label>
             <input type="number" id="age" placeholder="Your age" min="0" max="100"><br>
 
             <!-- Select your role -->
-            <label for="roles">
+            <p>
                 Which option best describes your current role?
-            </label>
+            </p>
+            
             <select name="role" id="roles">
                 <option disabled="" selected="" value="">Select current role</option>
                 <option value="">Student</option>
@@ -48,6 +49,7 @@
                 <option value="">Prefer not to say</option>
                 <option value="">Other</option>
             </select>
+            
 
             <!-- Would you recomment? -->
             
@@ -65,8 +67,8 @@
             </div>
             
             <!--  favorite feature  -->
-            <br>
-            <label for="features">What is your favorite feature of freeCodeCamp?</label>
+            
+            <p>What is your favorite feature of freeCodeCamp?</p>
             <select name="features" id="features">
                 <option disabled="" selected="" value="">Select an option</option>
                 <option value="">Challenges</option>
@@ -113,7 +115,9 @@
             <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
 
             <!--  Submit button  -->
+            
             <input type="submit" value="Submit">
+            
 
         </form>
     </main>
