@@ -32,6 +32,7 @@ header {
     height: 70px;
     top: 0;
     z-index: 10;
+    animation: headerBar 1s;
 }
 
 header a {
@@ -45,6 +46,11 @@ header a:active {
 
 header h2 {
     padding-left: 10px;
+    transition: transform .25s;
+}
+
+header h2:hover {
+    transform: scale(1.05, 1.05);
 }
 
 nav ul {
@@ -54,12 +60,39 @@ nav ul {
 nav li {
     display: inline;
     padding-right: 20px;
+    transition: transform .25s;
+}
+
+nav li:hover {
+    transform: scale(1.5, 1.5);
+}
+
+@keyframes headerBar {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
 }
 
 /* Main */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 main {
     position: relative;
     top: 100px;
+    animation: fadeIn 1s;
 
         /* Flexbox */
     display: flex;
@@ -78,6 +111,10 @@ form {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+}
+
+#name, #email, #age {
+    width: 100%;
 }
 
 input {
@@ -110,15 +147,25 @@ label {
     align-self: center;
 }
 
-.user-details {
-    width: 100%;
+input[type=submit] {
+    background-color: coral;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: transform .5s;
 }
 
+input[type=submit]:active {
+    background-color: white;
+}
 
+input[type=submit]:hover {  
+    transform: scale(1.05, 1.05);
+}
 
 /* Footer */
 
 footer {
+    animation: fadeIn 1s;
     border-top: 1px solid white;
     position: relative;
     top: 200px;
